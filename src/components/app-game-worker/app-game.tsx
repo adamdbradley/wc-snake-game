@@ -48,7 +48,8 @@ export class AppGame {
     start()
   }
   async componentWillLoad() {
-    await init(
+    console.log('wc-snake-game-worker componentWillLoad');
+    init(
       this.size,
       (grid) => {
         console.log('onGridChange', grid);
@@ -64,6 +65,9 @@ export class AppGame {
       }
     );
   }
+  componentDidLoad() {
+    console.log('wc-snake-game-worker componentDidLoad');
+  }
   play = (ev: Event) => {
     ev.preventDefault();
     this.gameDiv.focus();
@@ -73,6 +77,7 @@ export class AppGame {
     restart();
   };
   render() {
+    console.log('wc-snake-game-worker render');
     if (!this.size)
       return (
         <p>

@@ -317,6 +317,9 @@ export async function init(
     onStateChange,
     onScoreChange
   );
+  return new Promise(resolve => {
+
+  });
 }
 
 export async function start() {

@@ -16,10 +16,10 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "stencil build --docs --next",
     "build.worker": "cd engine && webpack ",
     "postbuild": "node ./postbuild.js --patch $(git rev-list --count HEAD)",
-    "start": "stencil build --dev --watch --serve",
+    "start": "stencil build --dev --watch --serve --next",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
